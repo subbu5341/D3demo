@@ -1,0 +1,2 @@
+Video Tutorial: https://www.youtube.com/watch?v=-Fkcndihl-M
+TimeFormat Concept: (d3-time-format) https://github.com/d3/d3-time-format

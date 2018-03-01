@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+</head>
+<body>
+<div id="svgd"></div>
+<script>
+
+(function() {
+var container = document.getElementById('container');
+
+// D3
+console.log("D3: ", d3);
+var shapeCoords = [
+                  [10, 10], [100, 10], [100, 100], [10, 100]
+                  ];
+
+var svg = d3.select('#container')
+        .append('svg:svg')
+        .attr('height', 600)
+        .attr('width', 800);
+
+var line = d3.line()
+            .x(function(d) { return d[0]; })
+            .y(function(d) { return d[1]; })
+            .interpolate('linear');
+
+svg.data(shapeCoords)
+.append('svg:path')
+.attr('d', line(shapeCoords) + 'Z')
+.style('stroke-width', 1)
+.style('stroke', 'steelblue');
+
+function render() {
+
+var svg = d3.select('#container').select("svg").selectAll('path').data(shapeCoords);
+svg.enter().append('svg:path')
+        .attr('d', line(shapeCoords) + 'Z')
+        .style('stroke-width', 1)
+        .style('stroke', 'steelblue');
+svg.attr('d', line(shapeCoords) + 'Z')
+        .style('stroke-width', 1)
+        .style('stroke', 'steelblue');
+svg.exit().remove();
+
+}
+render();
+})()
+</script>
+</body>
+</html>
