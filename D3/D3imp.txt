@@ -1,2 +1,5 @@
 Video Tutorial: https://www.youtube.com/watch?v=-Fkcndihl-M
 TimeFormat Concept: (d3-time-format) https://github.com/d3/d3-time-format
+Trnasition Basics: https://www.dashingd3js.com/lessons/d3-transition-basics
+interpolator: https://npm.runkit.com/d3-interpolate?t=1520231567273
+			  https://github.com/d3/d3-interpolate	
